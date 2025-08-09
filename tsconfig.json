@@ -2,6 +2,6 @@
   "files": [],
   "references": [
     { "path": "./packages/protocol" },
-    { "path": "./apps/circuit-backend" }
+    { "path": "./apps/circuit-backend" },
   ]
 }

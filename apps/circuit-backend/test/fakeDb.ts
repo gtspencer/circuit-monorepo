@@ -1,11 +1,11 @@
-import type { DB } from '../src/types.js';
+import type { DB, SettingsDoc } from '../src/types.js';
 
 export function makeFakeDb(): DB {
     return {
         async getCurrentSettings(fid) {
             return null;
         },
-        async setCurrentSettings(fid) {
+        async upsertCurrentSettings(fid: number, settings: SettingsDoc) {
             return null;
         },
     };

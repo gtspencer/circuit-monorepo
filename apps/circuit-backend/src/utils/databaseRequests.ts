@@ -1,4 +1,4 @@
-import type { DatabaseRequests } from '../types.js';
+import type { DatabaseRequests, SettingsDoc } from '../types.js';
 
 export function createDatabaseRequests(/* pgPool: Pool */): DatabaseRequests {
   return {
@@ -6,7 +6,7 @@ export function createDatabaseRequests(/* pgPool: Pool */): DatabaseRequests {
       // return (await pgPool.query('select ... where fid=$1', [fid])).rows[0] ?? null;
       return null;
     },
-    async upsertCurrentSettings(fid) {
+    async upsertCurrentSettings(fid: number, settings: SettingsDoc) {
       return null;
     },
   };

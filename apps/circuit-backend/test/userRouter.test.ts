@@ -40,7 +40,14 @@ describe('router', () => {
         quoteSetting: { isOn: true, amount: '10000' },
         followSetting: { isOn: true, amount: '10000' },
       },
-      tipSettings: { tipToken: '0xabc', minScore: 0.5, followersOnly: true },
+      tipSettings: {
+        tipsOn: true,
+        tipToken: '0xabc',
+        minScore: 0.5,
+        followersOnly: true,
+        followingOnly: true,
+        postPayoutLimit: -1,
+        onePayoutPerPost: false },
     };
 
     // set
