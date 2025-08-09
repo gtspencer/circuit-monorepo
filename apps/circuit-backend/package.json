@@ -1,0 +1,31 @@
+{
+  "name": "@circuit/backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "author": "0xSpencer",
+  "license": "ISC",
+  "description": "",
+  "engines": { "node": ">=18.19" },
+  "devDependencies": {
+    "@types/node": "^24.2.0",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.2",
+    "vitest": "^2.0.5"
+  },
+  "dependencies": {
+    "@msgpack/msgpack": "^3.1.2",
+    "@neynar/nodejs-sdk": "^3.34.0",
+    "redis": "^5.8.0",
+    "ws": "^8.18.3",
+    "zod": "^4.0.15"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "circuit-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf packages/*/dist apps/*/dist",
+    "dev:backend": "npm -w apps/backend run dev"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.2"
+  }
+}
