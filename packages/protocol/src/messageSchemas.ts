@@ -31,3 +31,6 @@ export type UserLoginAckMsg = z.infer<typeof UserLoginAck>;
 // STOP FORGETTING TO ADD NEW MESSAGES HERE YOU IDIOT
 export const ServerMsg = z.discriminatedUnion('type', [UserLogin, UserGetSettings, UserSetSettings]);
 export type ServerMsgT = z.infer<typeof ServerMsg>;
+
+export const ClientMsg = z.discriminatedUnion('type', [UserLoginAck]);
+export type ClientMsgT = z.infer<typeof ClientMsg>;

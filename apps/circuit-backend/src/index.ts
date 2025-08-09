@@ -16,7 +16,12 @@ const wss = new WebSocketServer({ server });
 
 const db = createDatabaseRequests(/* pgPool */);
 
-const redisClient = createClient({ url: process.env.REDIS_URL! });
+const redisClient = createClient({
+  socket: {
+    host: '127.0.0.1', // localhost
+    port: 6379,        // default Redis/Memurai port
+  }
+});
 await redisClient.connect();
 const cache = createRedisRequests(redisClient);
 

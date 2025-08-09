@@ -1,5 +1,5 @@
 import { ServerMsg } from '@circuit/protocol';
-import type { ServerMsgT } from '@circuit/protocol';
+import type { BaseMsg, ServerMsgT } from '@circuit/protocol';
 import type { Ctx, Handler, RouteEntry } from './types.js';
 import type { WebSocket } from 'ws';
 import { log } from './utils/logger.js';
@@ -53,7 +53,7 @@ export async function route(ws: WebSocket, raw: string, ctx: Ctx) {
   }
 
   try {
-    return handler(ws, msg as any, ctx);
+    return handler(ws, msg as BaseMsg, ctx);
   } catch (err: any) {
     return send(ws, { type: 'handler-error', error: err?.message ?? 'handler_error' });
   }
