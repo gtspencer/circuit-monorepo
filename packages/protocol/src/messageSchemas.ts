@@ -21,6 +21,13 @@ export const UserSetSettings = z.object({
 })
 export type UserSetSettingsMsg = z.infer<typeof UserSetSettings>;
 
+// === outbound message schemas (client -> server) ===
+export const UserLoginAck = z.object({
+    type: z.literal('user.login:ack'),
+    fid: z.number()
+})
+export type UserLoginAckMsg = z.infer<typeof UserLoginAck>;
+
 // STOP FORGETTING TO ADD NEW MESSAGES HERE YOU IDIOT
 export const ServerMsg = z.discriminatedUnion('type', [UserLogin, UserGetSettings, UserSetSettings]);
 export type ServerMsgT = z.infer<typeof ServerMsg>;

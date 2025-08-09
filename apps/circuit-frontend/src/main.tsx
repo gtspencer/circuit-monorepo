@@ -5,6 +5,7 @@ import { WagmiProvider } from "wagmi";
 
 import App from "./App.tsx";
 import { config } from "./wagmi.ts";
+import { WSProvider } from "./ws/WSProvider.js";
 
 import "./index.css";
 
@@ -14,8 +15,10 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
-        <App />
+        <WSProvider>
+          <App />
+        </WSProvider>
       </QueryClientProvider>
     </WagmiProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
