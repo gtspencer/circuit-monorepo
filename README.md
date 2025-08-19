@@ -1,10 +1,8 @@
-## Circuit
-
-`Get paid for your attention`
+## Circuit - Get paid for your attention
 
 Circuit is a full stack app, designed to be deployed on Farcaster as a miniapp
 
-It allows a Facaster user to pay out to users who interact with their casts.
+It allows a Facaster user to pay out to users who interact with their casts, with a strict filter on payouts.
 
 Attention is the most valuable resource on the internet, and tipping while giving attention is backwards.
 
@@ -15,3 +13,4 @@ A node websocket server enabling users to configure tip settings.  Uses a Redis 
 
 #### Frontend
 A React.js interface enabling users to configure tip settings.  Doubles as a Farcaster Miniapp
+
